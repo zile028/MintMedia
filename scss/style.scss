@@ -1,0 +1,185 @@
+@import "starter";
+@import "mixins";
+
+/*------- GLOBAL -------*/
+h2 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+/*------- BOOTSTRAP CLASS -------*/
+
+/*---------------------------------*/
+/* navbar */
+.navbar {
+  background-color: rgba($bela, 0.7);
+  img {
+    width: 150px;
+  }
+  .nav-link {
+    text-transform: uppercase;
+    color: $tamnoZelena;
+    font-weight: 600;
+    transition: $transition;
+    &.active,
+    &:hover {
+      background-color: $tamnoZelena;
+      color: $bela;
+    }
+  }
+}
+header {
+  background-image: linear-gradient(rgba($bela, 0.2), rgba($bela, 0.2)),
+    url(../img/header.jpg);
+  @include bgBasic;
+  height: 67vh;
+  margin-bottom: 120px;
+  &.blog {
+    background-image: linear-gradient(rgba($bela, 0.2), rgba($bela, 0.2)),
+      url(../img/blog-header.jpg);
+    margin-bottom: 0px;
+    height: 48vh;
+    & > div {
+      margin-bottom: 0px;
+      background: none;
+      h1 {
+        background-color: rgba($srednjeZelena, 0.9);
+        padding: 30px;
+      }
+    }
+  }
+
+  &.kontakt {
+    background-image: linear-gradient(rgba($bela, 0.2), rgba($bela, 0.2)),
+      url(../img/header-kontakt.jpg);
+    margin-bottom: 0px;
+    & > div {
+      margin-bottom: 0px;
+      background: none;
+      h1 {
+        background-color: rgba($srednjeZelena, 0.9);
+        padding: 30px;
+      }
+    }
+  }
+  & > div {
+    background-color: $srednjeZelena;
+    color: $bela;
+    padding: 40px 20px;
+    position: relative;
+    margin-bottom: -120px;
+    @media (max-width: 769px) {
+    }
+    h1 {
+      font-size: 3.5rem;
+      @media (max-width: 769px) {
+        font-size: 2.5rem;
+      }
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+/* usluge */
+.usluge {
+  .card {
+    width: 18rem;
+    @media (max-width: 769px) {
+      width: 100%;
+    }
+  }
+  h2 {
+    &::after {
+      content: "";
+      display: block;
+      width: 100px;
+      margin: 20px auto 0;
+      height: 15px;
+      background: linear-gradient(to right, $bela, $tamnoZelena);
+    }
+  }
+}
+
+/* footer */
+footer {
+  padding: 42px 0;
+  background-color: $srednjeZelena;
+  .col-md-4 {
+    h3 {
+      background-color: $bela;
+      display: inline-block;
+      padding: 5px 20px;
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+    p,
+    li,
+    i {
+      font-size: 1.1rem;
+      color: $bela;
+    }
+    i {
+      font-size: 2.2rem;
+      margin-right: 10px;
+    }
+  }
+  hr {
+    height: 1px;
+    width: 100%;
+    background-color: $bela;
+    margin: 50px 0;
+  }
+  hr + p {
+    text-align: center;
+    color: $bela;
+  }
+}
+
+/* kontaktforma */
+.kontaktforma {
+  form {
+    background-color: $srednjeZelena;
+    padding: 50px;
+    margin-top: -170px;
+    @media (max-width: 769px) {
+      padding: 20px;
+    }
+  }
+}
+
+/* blogPost */
+.blogPost {
+  .card {
+    background-color: transparent !important;
+    border: none;
+    margin-bottom: 150px;
+    &-body {
+      background-color: $srednjeZelena;
+      margin: -105px 40px 0;
+      padding: 25px;
+      color: $bela;
+      @media (max-width: 769px) {
+        margin: -105px 0px 0;
+      }
+    }
+    &-title {
+      font-size: 2rem;
+    }
+  }
+  aside {
+    div {
+      border: 2px solid $tamnoZelena;
+      padding: 20px;
+      margin-bottom: 20px;
+      a {
+        color: $tamnoZelena;
+      }
+    }
+  }
+}
+/* navbar */
+/* navbar */
+/* navbar */
+/* navbar */
+/* navbar */
